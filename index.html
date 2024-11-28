@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Wellness Garden</title>
+    <title>Sunflower Blooming Garden</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="garden">
-        <!-- Shelf for seed packets -->
-        <div class="shelf">
-            <img src="seed1.png" alt="Seed Packet 1" class="seed" id="seed1">
-            <img src="seed2.png" alt="Seed Packet 2" class="seed" id="seed2">
-            <img src="seed3.png" alt="Seed Packet 3" class="seed" id="seed3">
+    <div class="room">
+        <!-- Window with Curtains -->
+        <div class="window">
+            <div class="curtain left"></div>
+            <div class="curtain right"></div>
+            <div class="window-frame"></div>
         </div>
 
-        <!-- Pot selection -->
-        <div class="pot-selection">
-            <img src="pot1.png" alt="Pot 1" class="pot" id="pot1">
-            <img src="pot2.png" alt="Pot 2" class="pot" id="pot2">
-            <img src="pot3.png" alt="Pot 3" class="pot" id="pot3">
-        </div>
+        <!-- The garden area with pot and seed -->
+        <div class="garden">
+            <div class="pot"></div>
+            <div class="seed"></div>
 
-        <!-- Planting area -->
-        <div class="planting-area">
-            <div id="plant" class="plant"></div>
+            <!-- Watering can and watering animation -->
+            <div class="watering-can">
+                <div class="water"></div>
+            </div>
+
+            <!-- Flower -->
+            <div class="flower"></div>
         </div>
-        
-        <div id="message" class="message">Pick a seed and a pot!</div>
     </div>
 
     <script src="app.js"></script>
