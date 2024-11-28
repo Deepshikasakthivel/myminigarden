@@ -1,43 +1,18 @@
-let selectedSeed = null;
-let selectedPot = null;
+// Trigger the watering animation and then blooming
+window.onload = () => {
+    // Start the curtain opening animation
+    document.querySelector('.left').style.transform = 'translateX(100%)';
+    document.querySelector('.right').style.transform = 'translateX(-100%)';
 
-document.querySelectorAll('.seed').forEach(seed => {
-    seed.addEventListener('click', () => {
-        selectedSeed = seed.id;
-        document.getElementById('message').innerText = 'You selected a seed!';
-    });
-});
+    setTimeout(() => {
+        // Watering process - Simulate the watering can appearing
+        document.querySelector('.watering-can').style.opacity = 1;
 
-document.querySelectorAll('.pot').forEach(pot => {
-    pot.addEventListener('click', () => {
-        selectedPot = pot.id;
-        document.getElementById('message').innerText = 'You selected a pot!';
-    });
-});
-
-// When the user clicks to plant
-document.querySelector('.planting-area').addEventListener('click', () => {
-    if (selectedSeed && selectedPot) {
-        document.getElementById('message').innerText = 'Planting...';
-
-        // Simulate flower blooming
+        // Simulate water pouring
         setTimeout(() => {
-            let flower = document.getElementById('plant');
-            flower.style.width = "100px"; // Flower size
-            flower.style.height = "100px";
-            flower.style.bottom = "50px";
-            flower.style.backgroundColor = getRandomFlowerColor();
-            flower.style.transition = 'width 1s, height 1s, bottom 1s';
+            document.querySelector('.seed').style.opacity = 0;  // Seed will disappear as it "grows"
+            document.querySelector('.flower').style.opacity = 1;  // Flower starts to bloom
+        }, 3000);  // Watering finishes after 3 seconds
 
-            document.getElementById('message').innerText = 'Your flower is blooming!';
-        }, 1000);
-    } else {
-        document.getElementById('message').innerText = 'Please select both a seed and a pot first!';
-    }
-});
-
-// Helper function to get random flower color
-function getRandomFlowerColor() {
-    const colors = ['#FF69B4', '#FFB6C1', '#FFD700', '#98FB98', '#FF6347'];
-    return colors[Math.floor(Math.random() * colors.length)];
-}
+    }, 1000);  // Wait for 1 second before starting the watering process
+};
