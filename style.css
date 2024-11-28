@@ -1,0 +1,169 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Aesthetic window with shelf and pot */
+.window-container {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    max-height: 700px;
+    background: url('window-background.jpg') no-repeat center center/cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: #fff;
+}
+
+.shelf {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.seeds {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.seed {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #7dbd4f;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.seed:hover {
+    transform: scale(1.1);
+}
+
+/* Pot and plant styling */
+.pot-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pot {
+    width: 150px;
+    height: 150px;
+    background-color: #a36f2a;
+    border-radius: 50% 50% 0 0;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.soil {
+    width: 100%;
+    height: 40%;
+    background-color: #3c2e1f;
+    position: absolute;
+    bottom: 0;
+}
+
+#plant {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: height 1s, opacity 1s;
+}
+
+/* Styling for plant types */
+.rose {
+    width: 30px;
+    height: 30px;
+    background-color: #e57373;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.tulip {
+    width: 30px;
+    height: 50px;
+    background-color: #fbc02d;
+    border-radius: 50% 50% 0 0;
+    opacity: 0;
+}
+
+.sunflower {
+    width: 40px;
+    height: 40px;
+    background-color: #ffeb3b;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #aaa;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Instructions Section */
+.instructions {
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
