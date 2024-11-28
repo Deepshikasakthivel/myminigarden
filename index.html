@@ -3,44 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Garden</title>
+    <title>Virtual Wellness Garden</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="window-container">
-        <!-- Window with seed shelf -->
-        <div class="window">
-            <div class="shelf">
-                <h2>Pick a Seed</h2>
-                <div class="seeds">
-                    <div class="seed" id="seed1" data-type="rose" title="Click to plant a Rose!"></div>
-                    <div class="seed" id="seed2" data-type="tulip" title="Click to plant a Tulip!"></div>
-                    <div class="seed" id="seed3" data-type="sunflower" title="Click to plant a Sunflower!"></div>
-                </div>
-            </div>
-
-            <!-- Pot to plant the seed -->
-            <div class="pot-container">
-                <h3>Your Plant</h3>
-                <div class="pot" id="pot">
-                    <div class="soil"></div>
-                    <div id="plant"></div>
-                </div>
-                <button id="waterButton" disabled>Water the Plant</button>
-            </div>
+    <div class="garden">
+        <!-- Shelf for seed packets -->
+        <div class="shelf">
+            <img src="seed1.png" alt="Seed Packet 1" class="seed" id="seed1">
+            <img src="seed2.png" alt="Seed Packet 2" class="seed" id="seed2">
+            <img src="seed3.png" alt="Seed Packet 3" class="seed" id="seed3">
         </div>
 
-        <!-- Instructions -->
-        <div class="instructions">
-            <p>Pick a seed, plant it, and watch it grow into a beautiful flower!</p>
+        <!-- Pot selection -->
+        <div class="pot-selection">
+            <img src="pot1.png" alt="Pot 1" class="pot" id="pot1">
+            <img src="pot2.png" alt="Pot 2" class="pot" id="pot2">
+            <img src="pot3.png" alt="Pot 3" class="pot" id="pot3">
         </div>
 
-        <!-- Tooltip Section -->
-        <div class="tooltip" id="tooltip">
-            <p>Pick a seed to start your garden!</p>
+        <!-- Planting area -->
+        <div class="planting-area">
+            <div id="plant" class="plant"></div>
         </div>
+        
+        <div id="message" class="message">Pick a seed and a pot!</div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
